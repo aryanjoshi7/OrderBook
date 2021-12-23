@@ -3,14 +3,15 @@
 
 #include "Order.h"
 #include <list>
-
 class Limit {
 
     public: 
         std::list<Order> orderlist;
-        int price;
+        double price;
+        int size;
+        Limit(double price_in);
 
-        Limit(int price_in);
+        void add(Order o);
 };
 
 

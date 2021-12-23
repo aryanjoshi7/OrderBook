@@ -1,22 +1,31 @@
+#ifndef BOOK_H
+#define BOOK_H
+
+
 #include<map>
+#include<vector>
+#include<unordered_set>
 #include "Limit.h"
 
 class Book { 
     public:
         
-        std::map< int, Limit> bids;
-        std::map< int, Limit> asks;
+        std::map< double, Limit> bids;
+        std::map< double, Limit> asks;
+        std::vector<double> transactions;
+        //std::unordered_set<double> prices;
 
-        Book();
 
         void add_Order(Order o);
 
         void execute();
 
-        
+
 
 
 
 
 
 };
+
+#endif
