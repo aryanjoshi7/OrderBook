@@ -16,11 +16,17 @@ class Book {
         //std::unordered_set<double> prices;
 
 
-        void add_Order(Order o);
+        void add_Order(Order &o);
 
-        void execute();
+        //void execute();
 
+        void print_Book();
 
+        void executeMarketOrder(Order &o);
+
+        void print_Transaction(const double &price, const int &shares);
+
+        void clearEmptyLimits();
 
 
 

@@ -10,8 +10,11 @@ class Limit {
         double price;
         int size;
         Limit(double price_in);
-
+        Limit();
         void add(Order o);
+        double get_price();
+        void removefront();
+        Order* seefront();
 };
 
 

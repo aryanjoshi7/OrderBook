@@ -1,7 +1,6 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-#include "Limit.h"
 
 class Order {
 
@@ -9,10 +8,12 @@ class Order {
         int amount;
         int price;
         bool type;
+        bool is_Limit;
         // Limit *parent;
-        Order(int price_in, int amount_in,bool type_in);
+        Order(double price_in, int amount_in,bool type_in, bool isLimitin);
 
         int get_shares();
-        int get_price();
+        double get_price();
+        void modify(Order &o);
 };
 #endif
